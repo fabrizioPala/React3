@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { GitHubUser } from "./GitHubUser"; // Make sure to adjust the import path
+import { GitHubUser } from "./GitHubUser"; 
 
 export function GithubUsers() {
   const [searchTerm, setSearchTerm] = useState("");
