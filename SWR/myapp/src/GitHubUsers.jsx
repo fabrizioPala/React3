@@ -1,8 +1,11 @@
 import React from 'react'
-import useSWrR from 'swr'
+import useSWR from 'swr'
 const fetcher = url=>fetch(url).then(response=> response.json())
 export  function GitHubUsers() {
-    const {data,error}=useSWrR('https://api.github.com/users',fetcher)
+    const {data,error}=useSWR('https://api.github.com/users',fetcher)
+    if(data===null){
+      return;
+    }
 
   return(
     <div>
